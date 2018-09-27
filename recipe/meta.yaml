@@ -1,10 +1,10 @@
 {% set provider = "DigitalOcean" %}
-{% set version = "0.1.3" %}
+{% set version = "1.0.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "7ac52753b78eb2a788d749834a5b29199a6ffbff802487bd503e7dbc9c3b2158" %}
+{% set sha256 = "3f386551fca2ce469ea04752d6409b75273b5fc219685f8c90f1f7f9d5c2dd96" %}
 {% set sha256_win64 = "3f9da7d244e1b5edac3f23980570ebe9748de97b13db46984ed50bcb34997186" %}
 
 package:
@@ -20,7 +20,7 @@ source:
     sha256: {{ sha256_win64 }}  # [win64]
 
 build:
-  number: 1001
+  number: 0
   script:
     - XCOPY src\github.com\terraform-providers\{{ name|lower }}\{{ x4_plugin }}.exe %LIBRARY_BIN%  # [win]
 
