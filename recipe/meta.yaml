@@ -1,6 +1,6 @@
 {% set provider = "DigitalOcean" %}
 {% set goname = "github.com/terraform-providers/terraform-provider-"+provider.lower() %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 
 {% set name = goname.split('/')[-1] %}
 {% set pkg_src = ('src/'+goname).replace("/",os.sep) %}
@@ -14,7 +14,7 @@ package:
 source:
   - folder:  {{ pkg_src }}
     url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-    sha256: b0f9b9e8ad03d73699802de04b7afea644629e5beb29f675ed5d9cb2ed50653f
+    sha256: 94d07b7e1c9e64908612792156c9a74bb99de66c4bdaed44b844f4769858da05
 
 build:
   number: 0
